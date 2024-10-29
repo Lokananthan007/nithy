@@ -1,0 +1,83 @@
+/* menubar.css */
+
+.menubar {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    background-color: #045250b1;
+    margin: 0 auto !important;
+    font-family: 'CustomFont';
+    padding: 10px 0;
+}
+
+.menubar .navbar-brand {
+    font-weight: bolder;
+    font-size: clamp(18px, 3vw, 25px) !important;
+    color: #170c19;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    font-family: 'CustomFont';
+}
+
+.menubar .nav-link {
+    color: #170c19;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: clamp(15px, 2.5vw, 20px) !important;
+    font-family: 'CustomFont';
+    text-transform: capitalize;
+    position: relative;
+    justify-content: space-around !important;
+}
+
+.menubar .nav-link.active {
+    color: #0000ff !important; 
+}
+
+.menubar .nav-link::before,
+.menubar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: #170c19; 
+    transition: width 0.3s ease;
+}
+
+.menubar .nav-link::before {
+    left: 0;
+}
+
+.menubar .nav-link::after {
+    right: 0;
+}
+
+.menubar .nav-link:hover {
+    color: #0000ff; 
+}
+
+.menubar .nav-link:hover::before,
+.menubar .nav-link:hover::after {
+    width: 80%;
+    background-color: #0000ff; 
+}
+
+#basic-navbar-nav{
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.menubar .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    backdrop-filter: blur(10px);
+    color: rgb(0, 0, 0);
+}
+
+.menubar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
